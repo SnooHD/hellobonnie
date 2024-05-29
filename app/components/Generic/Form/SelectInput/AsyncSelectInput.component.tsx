@@ -46,3 +46,5 @@ export const AsyncSelectInput = forwardRef<any, AsyncSelectInputProps>(
     )
   }
 );
+
+AsyncSelectInput.displayName = 'AsyncSelectInput';

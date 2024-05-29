@@ -16,8 +16,8 @@ export const PostalCodeData = ({ data }: PostalCodeDataProps) => {
 
         <h2 className="text-heading-m mt-4 font-bold">Places at postal code</h2>
         {
-          places.map(({ 'place name': placeName, ...place}) => (
-            <div className="mt-2">
+          places.map(({ 'place name': placeName, ...place}, index) => (
+            <div className="mt-2" key={`place-${placeName}-${index}`}>
               <div className="text-regular-l">{placeName}</div>
               <Table heading={[]} items={Object.entries(place)} />
             </div>

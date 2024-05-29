@@ -26,12 +26,7 @@ export const FormContent = ({ state, setResponseData }: FormContentProps) => {
   });
   const { control, watch, setError, formState: { errors } } = form;
 
-  const watchCountry = (watch('country') as unknown as SelectOptionProps)?.value
-  useEffect(() => {
-    const subscription = watch((value, { name, type }) => console.log(value, name, type));
-    return () => subscription.unsubscribe();
-  }, [watch]);
-
+  const watchCountry = (watch('country') as unknown as SelectOptionProps)?.value;
   const countrySelectOptions = [
     {value: 'DE', label: 'Germany'},
     {value: 'US', label: 'United States'}
@@ -68,7 +63,7 @@ export const FormContent = ({ state, setResponseData }: FormContentProps) => {
 
         setResponseData(state.response);
     }
-  }, [state, setError]);
+  }, [state, setError, setResponseData]);
 
  return (
   <>

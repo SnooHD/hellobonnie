@@ -31,3 +31,5 @@ export const PostalCodeSelect = forwardRef<any, PostalCodeSelectProps>(
     )
   }
 );
+
+PostalCodeSelect.displayName = 'PostalCodeSelect';
